@@ -25,9 +25,7 @@ const Property = ({ hit }) => {
             alt={hit.title}
           />
         ) : (
-          <PlaceholderImg
-            image={placeholder?.childImageSharp.gatsbyImageData}
-          />
+          <PlaceholderImg image={placeholder.childImageSharp.gatsbyImageData} />
         )}
       </Link>
       <h5 className="type">{hit.acf_property_fields.propertyType}</h5>
@@ -84,7 +82,11 @@ const StyledImg = styled(GatsbyImage)`
   }
 `
 
-const PlaceholderImg = styled.div``
+const PlaceholderImg = styled(GatsbyImage)`
+  img {
+    ${tw`rounded-lg overflow-hidden border border-gray-200`}
+  }
+`
 
 const Info = styled.div`
   ${tw`flex justify-between mt-3`}
@@ -97,5 +99,5 @@ const Info = styled.div`
 `
 
 const Price = styled.div`
-  ${tw`font-light text-lg mt-5`}
+  ${tw`font-normal text-lg mt-5 text-gray-700`}
 `
