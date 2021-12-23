@@ -26,6 +26,7 @@ const AlgolioPropertyQuery = `{
                 placeholder: TRACED_SVG
                 width: 480
                 aspectRatio: 1.375
+                transformOptions: {cropFocus: CENTER}
               )
             }
           }
@@ -34,8 +35,6 @@ const AlgolioPropertyQuery = `{
     }
   }
 }`
-
-// height: 200
 
 const queries = [
   {
@@ -47,13 +46,12 @@ const queries = [
 module.exports = {
   siteMetadata: {
     title: `Homelet Inn`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Homelet Inn is a real estate company based in the Great Britain`,
     author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `http://homelet-inn.local/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -61,6 +59,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -77,6 +76,12 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        url: "http://homelet-inn.local/graphql",
+      },
+    },
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-google-fonts`,
@@ -88,13 +93,6 @@ module.exports = {
         display: "swap",
       },
     },
-    {
-      resolve: `gatsby-source-wordpress`,
-      options: {
-        url: "http://homelet-inn.local/graphql",
-      },
-    },
-
     {
       resolve: `gatsby-plugin-algolia`,
       options: {

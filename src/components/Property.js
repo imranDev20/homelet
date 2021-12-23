@@ -1,7 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
-import { GatsbyImage, Placeholder } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import tw, { styled } from "twin.macro"
+import NumberFormat from "react-number-format"
 
 import { MdLocationSearching } from "react-icons/md"
 import { FiMapPin } from "react-icons/fi"
@@ -11,7 +12,7 @@ import { FiClock } from "react-icons/fi"
 import { usePlaceholderQuery } from "../hooks/usePlaceholderQuery"
 
 const Property = ({ hit }) => {
-  const { placeHolderImg } = usePlaceholderQuery()
+  const { placeholder } = usePlaceholderQuery()
 
   return (
     <Wrapper>
@@ -25,7 +26,7 @@ const Property = ({ hit }) => {
           />
         ) : (
           <PlaceholderImg
-            image={placeHolderImg.localFile.childImageSharp.gatsbyImageData}
+            image={placeholder?.childImageSharp.gatsbyImageData}
           />
         )}
       </Link>
@@ -53,7 +54,14 @@ const Property = ({ hit }) => {
         </div>
       </Info>
 
-      <Price>£{hit.acf_property_fields.price}</Price>
+      <Price>
+        <NumberFormat
+          value={hit.acf_property_fields?.price}
+          displayType={"text"}
+          thousandSeparator={true}
+          prefix={"£"}
+        />
+      </Price>
     </Wrapper>
   )
 }
@@ -76,11 +84,7 @@ const StyledImg = styled(GatsbyImage)`
   }
 `
 
-const PlaceholderImg = styled(GatsbyImage)`
-  img {
-    ${tw`rounded-lg overflow-hidden border border-gray-200`}
-  }
-`
+const PlaceholderImg = styled.div``
 
 const Info = styled.div`
   ${tw`flex justify-between mt-3`}
