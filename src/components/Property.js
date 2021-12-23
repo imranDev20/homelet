@@ -1,21 +1,33 @@
 import React from "react"
 import { Link } from "gatsby"
-import { getImage, GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, Placeholder } from "gatsby-plugin-image"
+import tw, { styled } from "twin.macro"
 
 import { MdLocationSearching } from "react-icons/md"
 import { FiMapPin } from "react-icons/fi"
 import { IoBedOutline } from "react-icons/io5"
 import { FiClock } from "react-icons/fi"
 
-import tw, { styled } from "twin.macro"
+import { usePlaceholderQuery } from "../hooks/usePlaceholderQuery"
 
 const Property = ({ hit }) => {
-  const imageData = getImage(hit.featuredImage.node.localFile)
+  const { placeHolderImg } = usePlaceholderQuery()
 
   return (
     <Wrapper>
       <Link to={hit.link}>
-        <StyledImg image={imageData} alt={hit.title} />
+        {hit.featuredImage ? (
+          <StyledImg
+            image={
+              hit.featuredImage.node.localFile.childImageSharp.gatsbyImageData
+            }
+            alt={hit.title}
+          />
+        ) : (
+          <PlaceholderImg
+            image={placeHolderImg.localFile.childImageSharp.gatsbyImageData}
+          />
+        )}
       </Link>
       <h5 className="type">{hit.acf_property_fields.propertyType}</h5>
 
@@ -37,7 +49,7 @@ const Property = ({ hit }) => {
           <IoBedOutline /> {hit.acf_property_fields.bedCount} beds
         </div>
         <div>
-          <FiClock /> 3 days ago
+          <FiClock /> {hit.date}
         </div>
       </Info>
 
@@ -51,16 +63,22 @@ export default Property
 const Wrapper = styled.div`
   ${tw`flex flex-col p-4 rounded overflow-hidden`}
   .type {
-    ${tw`text-sm text-primary mt-3 font-normal`}
+    ${tw`text-sm text-primary mt-4 font-normal`}
   }
   .title {
-    ${tw`font-medium text-gray-700 mt-3 text-lg`}
+    ${tw`font-medium text-gray-700 mt-2 text-lg`}
   }
 `
 
 const StyledImg = styled(GatsbyImage)`
   img {
     ${tw`rounded-lg overflow-hidden `}
+  }
+`
+
+const PlaceholderImg = styled(GatsbyImage)`
+  img {
+    ${tw`rounded-lg overflow-hidden border border-gray-200`}
   }
 `
 

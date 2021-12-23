@@ -8,6 +8,7 @@ const AlgolioPropertyQuery = `{
       id
       link
       title
+      date(fromNow: true)
       acf_property_fields {
         placeName
         postalCode
