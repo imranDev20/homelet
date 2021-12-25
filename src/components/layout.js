@@ -16,4 +16,4 @@ const Layout = ({ children }) => {
 
 export default Layout
 
-const Main = tw.main`font-primary`
+const Main = tw.main`font-primary text-gray-700`

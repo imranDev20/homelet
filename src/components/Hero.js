@@ -16,7 +16,7 @@ const Hero = () => {
         <Search>
           <SearchBox
             translations={{
-              placeholder: "Type location, postal code or anything...",
+              placeholder: "Ex: Flat with 5 beds London E213",
             }}
           />
         </Search>
@@ -67,23 +67,21 @@ const Search = styled.div`
     ${tw`relative text-gray-700`}
 
     .ais-SearchBox-input {
-      ${tw`w-full rounded outline-none pl-9 py-3`}
+      ${tw`w-full rounded outline-none pl-9 py-3 text-gray-700`}
       &::-webkit-search-cancel-button {
         -webkit-appearance: none;
       }
     }
     .ais-SearchBox-submit {
-      ${tw`absolute top-1/2 left-3 transform -translate-y-1/2`}
+      ${tw`absolute top-1/2 left-3 transform -translate-y-1/2 `}
       svg {
-        width: 15px;
-        height: 15px;
+        ${tw`w-4 h-4 fill-current text-gray-700`}
       }
     }
     .ais-SearchBox-reset {
       ${tw`absolute top-1/2 right-3 transform -translate-y-1/2`}
       svg {
-        width: 10px;
-        height: 10px;
+        ${tw`w-2.5 h-2.5 fill-current text-gray-700`}
       }
     }
   }

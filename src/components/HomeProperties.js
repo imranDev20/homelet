@@ -32,10 +32,10 @@ const HomeProperties = () => {
 export default HomeProperties
 
 const Wrapper = styled.section`
-  ${tw`w-full mt-5`}
+  ${tw`w-full mt-8`}
 `
 const Container = styled.div`
-  ${tw`container mx-auto`}
+  ${tw`container mx-auto px-8`}
   .ais-Hits-list {
     display: grid;
     /* grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); */

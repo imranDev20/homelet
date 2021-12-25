@@ -29,7 +29,7 @@ const Container = styled.div`
   ${tw`container mx-auto h-20 flex items-center px-5`}
 `
 
-const Logo = styled.div`
+export const Logo = styled.div`
   ${tw`flex items-center`}
   svg {
     ${tw`text-primary mr-1 text-3xl`}

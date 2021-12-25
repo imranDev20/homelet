@@ -4,6 +4,7 @@ import Seo from "../components/Seo"
 import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import HomeProperties from "../components/HomeProperties"
+import Footer from "../components/Footer"
 
 import algoliasearch from "algoliasearch/lite"
 import { InstantSearch } from "react-instantsearch-dom"
@@ -19,6 +20,7 @@ const IndexPage = () => (
       <Seo title="Home" />
       <Hero />
       <HomeProperties />
+      <Footer />
     </InstantSearch>
   </Layout>
 )

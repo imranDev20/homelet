@@ -15,5 +15,11 @@ module.exports = {
       },
     },
   },
+  variants: {
+    extend: {
+      textColor: ["group", "hover", "focus", "group-hover"],
+    },
+  },
+
   plugins: [],
 }

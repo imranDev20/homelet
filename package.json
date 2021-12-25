@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "homelet-inn",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Homelet Inn Gatsby SIte",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "@imrankabir97",
   "dependencies": {
     "algoliasearch": "^4.11.0",
     "autoprefixer": "^10.4.0",

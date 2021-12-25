@@ -45,7 +45,7 @@ const Property = ({ hit }) => {
 
       <Info>
         <div>
-          <IoBedOutline /> {hit.acf_property_fields.bedCount} beds
+          <IoBedOutline /> {hit.acf_property_fields.bedCount}
         </div>
         <div>
           <FiClock /> {hit.date}
@@ -78,7 +78,7 @@ const Wrapper = styled.div`
 
 const StyledImg = styled(GatsbyImage)`
   img {
-    ${tw`rounded-lg overflow-hidden `}
+    ${tw`rounded-lg overflow-hidden`}
   }
 `
 
