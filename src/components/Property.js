@@ -5,9 +5,8 @@ import tw, { styled } from "twin.macro"
 import NumberFormat from "react-number-format"
 
 import { MdLocationSearching } from "react-icons/md"
-import { FiMapPin } from "react-icons/fi"
+import { FiMapPin, FiClock } from "react-icons/fi"
 import { IoBedOutline } from "react-icons/io5"
-import { FiClock } from "react-icons/fi"
 
 import { usePlaceholderQuery } from "../hooks/usePlaceholderQuery"
 

@@ -22,10 +22,10 @@ const AlgolioPropertyQuery = `{
           localFile {
             childImageSharp {
               gatsbyImageData(
-                placeholder: TRACED_SVG
                 width: 480
                 aspectRatio: 1.375
                 transformOptions: {cropFocus: CENTER}
+                placeholder: BLURRED
               )
             }
           }
@@ -105,6 +105,6 @@ module.exports = {
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }
