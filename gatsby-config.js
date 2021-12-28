@@ -16,7 +16,6 @@ const AlgolioPropertyQuery = `{
         bedCount
         price
       }
-      content
       
       featuredImage {
         node {

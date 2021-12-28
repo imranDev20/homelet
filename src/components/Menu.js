@@ -10,7 +10,7 @@ const Menu = () => {
   return (
     <Wrapper>
       {menu.nodes[0].menuItems.nodes.map(item => (
-        <div>
+        <div key={item.id}>
           <Link to={item.path}>{item.label}</Link>
         </div>
       ))}

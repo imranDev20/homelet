@@ -29,7 +29,7 @@ const Footer = () => {
           <ColTItle>Quick Links</ColTItle>
           <Links>
             {menu.nodes[0].menuItems.nodes.map(item => (
-              <div>
+              <div key={item.id}>
                 <Link to={item.path}>{item.label}</Link>
               </div>
             ))}
@@ -48,7 +48,7 @@ const Footer = () => {
               <FiPhone size={16} />
             </ContactIcon>
             <ContactInfo>
-              <a href="#">073 XXXX XXXX</a>
+              <a href="tel:073 XXXX XXXX">073 XXXX XXXX</a>
             </ContactInfo>
           </Contact>
           <Contact>
@@ -56,7 +56,9 @@ const Footer = () => {
               <FiMail size={16} />
             </ContactIcon>
             <ContactInfo>
-              <a href="#">contact@homelet-inn.co.uk</a>
+              <a href="mailto:contact@homelet-inn.co.uk">
+                contact@homelet-inn.co.uk
+              </a>
             </ContactInfo>
           </Contact>
           <Contact>
