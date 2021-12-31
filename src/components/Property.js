@@ -35,7 +35,7 @@ const Property = ({ hit }) => {
           <PlaceholderImg image={placeholder.childImageSharp.gatsbyImageData} />
         )}
       </Link>
-      <Type>{hit.acf_property_fields.propertyType}</Type>
+      <Type>{hit.customPropertyFields.propertyType}</Type>
 
       <Link to={hit.link}>
         <Title>{hit.title}</Title>
@@ -43,16 +43,16 @@ const Property = ({ hit }) => {
 
       <Info>
         <div>
-          <FiMapPin /> {hit.acf_property_fields.placeName}
+          <FiMapPin /> {hit.customPropertyFields.placeName}
         </div>
         <div>
-          <MdLocationSearching /> {hit.acf_property_fields.postalCode}
+          <MdLocationSearching /> {hit.customPropertyFields.postalCode}
         </div>
       </Info>
 
       <Info>
         <div>
-          <IoBedOutline /> {hit.acf_property_fields.bedCount}
+          <IoBedOutline /> {hit.customPropertyFields.bedCount}
         </div>
         <div>
           <FiClock /> {hit.date}
@@ -61,7 +61,7 @@ const Property = ({ hit }) => {
 
       <Price>
         <NumberFormat
-          value={hit.acf_property_fields?.price}
+          value={hit.customPropertyFields?.price}
           displayType={"text"}
           thousandSeparator={true}
           prefix={"£"}

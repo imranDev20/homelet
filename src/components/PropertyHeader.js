@@ -26,7 +26,7 @@ const PropertyHeader = ({ data }) => {
   const imageData = getImage(data.property.featuredImage.node.localFile)
   const { title, date } = data.property
   const { placeName, postalCode, propertyType, price } =
-    data.property.acf_property_fields
+    data.property.customPropertyFields
 
   return (
     <>

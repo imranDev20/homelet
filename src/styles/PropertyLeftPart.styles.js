@@ -11,24 +11,40 @@ export const Overview = styled.div`
 `
 
 export const OverviewContainer = styled.div`
-  ${tw`grid grid-cols-4 mt-5`}
-  &>div {
-    ${tw`flex items-center mt-3`}
+  ${tw`grid grid-cols-3 mt-5`}
+`
 
-    svg {
-      ${tw`text-primary mr-2 text-lg`}
-    }
+export const Block = styled.div`
+  ${tw`flex items-center my-2`}
+`
+
+export const BlockIcon = styled.div`
+  ${tw`p-2 border mr-4 rounded border-gray-200`}
+  svg {
+    ${tw`text-2xl  text-primary`}
   }
 `
+
+export const BlockHead = styled.div`
+  ${tw`text-gray-700 text-base font-medium mb-1`}
+`
+
+export const BlockValue = styled.div`
+  ${tw`text-gray-500 text-sm font-light`}
+`
+
 export const AboutProperty = styled.div`
   h4 {
-    ${tw`font-semibold text-xl mt-12`}
+    ${tw`font-semibold text-xl mt-12 mb-5`}
   }
   div {
-    ${tw`mt-5 leading-loose`}
+    ${tw` leading-loose text-gray-500`}
   }
 `
 
 export const PropertyVideo = styled.div`
+  h4 {
+    ${tw`font-semibold text-xl mt-12 mb-5`}
+  }
   ${tw`mt-12`}
 `

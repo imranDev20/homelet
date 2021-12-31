@@ -33,13 +33,22 @@ export const query = graphql`
       title
       date(fromNow: true)
       content
-      acf_property_fields {
+      customPropertyFields {
+        propertyVideo
+        bathCount
+        receptionCount
+        bedCount
+        epcRating
+        floorNo
+        furnished
+        heating
+        garden
+        kitchen
+        parking
         placeName
         postalCode
-        propertyType
-        bedCount
         price
-        propertyVideo
+        propertyType
       }
       featuredImage {
         node {
