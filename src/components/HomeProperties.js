@@ -1,6 +1,7 @@
 import React from "react"
-import tw, { styled } from "twin.macro"
 import { Hits, connectStateResults } from "react-instantsearch-dom"
+
+import { Wrapper, Container, NoResults } from "../styles/Homeproperties.styles"
 
 import Property from "./Property"
 import NoResultsImage from "../images/no-results.png"
@@ -30,20 +31,3 @@ const HomeProperties = () => {
 }
 
 export default HomeProperties
-
-const Wrapper = styled.section`
-  ${tw`w-full mt-8`}
-`
-const Container = styled.div`
-  ${tw`container mx-auto px-8`}
-  .ais-Hits-list {
-    display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); */
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-`
-const NoResults = styled.div`
-  img {
-    ${tw`mx-auto w-96`}
-  }
-`

@@ -1,12 +1,20 @@
 import React from "react"
 import { Link } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
-import tw, { styled } from "twin.macro"
 import NumberFormat from "react-number-format"
 
 import { MdLocationSearching } from "react-icons/md"
 import { FiMapPin, FiClock } from "react-icons/fi"
 import { IoBedOutline } from "react-icons/io5"
+
+import {
+  Wrapper,
+  StyledImg,
+  PlaceholderImg,
+  Info,
+  Price,
+  Type,
+  Title,
+} from "../styles/Property.styles"
 
 import { usePlaceholderQuery } from "../hooks/usePlaceholderQuery"
 
@@ -27,10 +35,10 @@ const Property = ({ hit }) => {
           <PlaceholderImg image={placeholder.childImageSharp.gatsbyImageData} />
         )}
       </Link>
-      <h5 className="type">{hit.acf_property_fields.propertyType}</h5>
+      <Type>{hit.acf_property_fields.propertyType}</Type>
 
       <Link to={hit.link}>
-        <h4 className="title">{hit.title}</h4>
+        <Title>{hit.title}</Title>
       </Link>
 
       <Info>
@@ -64,39 +72,3 @@ const Property = ({ hit }) => {
 }
 
 export default Property
-
-const Wrapper = styled.div`
-  ${tw`flex flex-col p-4 rounded overflow-hidden`}
-  .type {
-    ${tw`text-sm text-primary mt-4 font-normal`}
-  }
-  .title {
-    ${tw`font-medium text-gray-700 mt-2 text-lg`}
-  }
-`
-
-const StyledImg = styled(GatsbyImage)`
-  img {
-    ${tw`rounded-lg overflow-hidden`}
-  }
-`
-
-const PlaceholderImg = styled(GatsbyImage)`
-  img {
-    ${tw`rounded-lg overflow-hidden border border-gray-200`}
-  }
-`
-
-const Info = styled.div`
-  ${tw`flex justify-between mt-3`}
-  div {
-    ${tw`flex items-center text-gray-700 font-light text-sm`}
-    svg {
-      ${tw`text-primary mr-1`}
-    }
-  }
-`
-
-const Price = styled.div`
-  ${tw`font-normal text-lg mt-5 text-gray-700`}
-`

@@ -1,6 +1,7 @@
 import React from "react"
-import tw, { styled } from "twin.macro"
 import { Link } from "gatsby"
+
+import { Wrapper } from "../styles/Menu.styles"
 
 import { useMenuQuery } from "../hooks/useMenuQuery"
 
@@ -19,10 +20,3 @@ const Menu = () => {
 }
 
 export default Menu
-
-const Wrapper = styled.div`
-  ${tw`flex flex-row ml-auto `}
-  div {
-    ${tw`mx-4 text-gray-700 font-normal hover:text-primary-dark hover:cursor-pointer transition-colors`};
-  }
-`
