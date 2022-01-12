@@ -4,7 +4,7 @@ import tw, { styled } from "twin.macro"
 
 // Components
 import Layout from "../components/Layout"
-import Seo from "../components/Seo"
+import Seo from "../components/seo"
 import PropertyHeader from "../components/PropertyHeader"
 import PropertyLeftPart from "../components/PropertyLeftPart"
 import PropertyRightPart from "../components/PropertyRightPart"

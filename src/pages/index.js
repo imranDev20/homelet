@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import Seo from "../components/Seo"
+import Seo from "../components/seo"
 import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import HomeProperties from "../components/HomeProperties"
