@@ -6,7 +6,7 @@ const AlgolioPropertyQuery = `{
   properties: allWpProperty {
     nodes {
       id
-      link
+      uri
       title
       date(fromNow: true)
       customPropertyFields {
@@ -47,7 +47,7 @@ module.exports = {
     title: `Homelet Inn`,
     description: `Homelet Inn is a real estate company based in the Great Britain`,
     author: `@gatsbyjs`,
-    siteUrl: `http://homelet-inn.local/`,
+    siteUrl: `https://homelet-inn.co.uk/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -78,7 +78,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        url: "http://homelet-inn.local/graphql",
+        url: "https://homelet-inn.co.uk/graphql",
       },
     },
     `gatsby-plugin-styled-components`,

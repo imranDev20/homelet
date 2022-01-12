@@ -30,10 +30,10 @@ const PropertyDetails = ({ data }) => {
 }
 
 export const query = graphql`
-  query PropertyDetailsQuery($link: String) {
-    property: wpProperty(link: { eq: $link }) {
+  query PropertyDetailsQuery($uri: String) {
+    property: wpProperty(uri: { eq: $uri }) {
       id
-      link
+      uri
       title
       date(fromNow: true)
       content

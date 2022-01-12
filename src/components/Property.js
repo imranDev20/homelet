@@ -21,9 +21,10 @@ import { usePlaceholderQuery } from "../hooks/usePlaceholderQuery"
 const Property = ({ hit }) => {
   const { placeholder } = usePlaceholderQuery()
 
+  console.log(hit)
   return (
     <Wrapper>
-      <Link to={hit.link}>
+      <Link to={hit.uri}>
         {hit.featuredImage ? (
           <StyledImg
             image={

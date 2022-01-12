@@ -13,7 +13,7 @@ exports.createPages = async ({ graphql, actions }) => {
     query PropertyLinkQuery {
       allWpProperty {
         nodes {
-          link
+          uri
         }
       }
     }
@@ -21,9 +21,9 @@ exports.createPages = async ({ graphql, actions }) => {
 
   data.allWpProperty.nodes.forEach(node => {
     actions.createPage({
-      path: node.link,
+      path: node.uri,
       component: path.resolve("./src/templates/PropertyDetails.js"),
-      context: { link: node.link },
+      context: { uri: node.uri },
     })
   })
 }
