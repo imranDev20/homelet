@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import tw, { styled } from "twin.macro"
 
 // Components
-import Layout from "../components/Layout"
+import Layout from "../components/layout"
 import Seo from "../components/seo"
 import PropertyHeader from "../components/PropertyHeader"
 import PropertyLeftPart from "../components/PropertyLeftPart"
