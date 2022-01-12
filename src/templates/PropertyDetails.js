@@ -7,6 +7,10 @@ import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 import PropertyHeader from "../components/PropertyHeader"
 import PropertyLeftPart from "../components/PropertyLeftPart"
+import PropertyRightPart from "../components/PropertyRightPart"
+
+// Styles
+import { DetailsContainer } from "../styles/PropertyDetails.styles"
 
 const PropertyDetails = ({ data }) => {
   console.log(data)
@@ -19,7 +23,7 @@ const PropertyDetails = ({ data }) => {
       <PropertyHeader data={data} />
       <DetailsContainer>
         <PropertyLeftPart data={data} />
-        <RightPart></RightPart>
+        <PropertyRightPart />
       </DetailsContainer>
     </Layout>
   )
@@ -66,16 +70,6 @@ export const query = graphql`
       }
     }
   }
-`
-
-const DetailsContainer = styled.div`
-  ${tw`container mx-auto px-8 mt-10 grid`}
-  grid-template-columns: 2fr 1fr;
-  column-gap: 2rem;
-`
-
-const RightPart = styled.div`
-  ${tw` `}
 `
 
 export default PropertyDetails

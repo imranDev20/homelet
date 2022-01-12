@@ -19,7 +19,7 @@ export const Block = styled.div`
 `
 
 export const BlockIcon = styled.div`
-  ${tw`p-2 border mr-4 rounded border-gray-200`}
+  ${tw`p-2 border mr-4 rounded border-gray-200 shadow-sm`}
   svg {
     ${tw`text-2xl  text-primary`}
   }

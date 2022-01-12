@@ -63,7 +63,7 @@ const Footer = () => {
               <FiPhone size={16} />
             </ContactIcon>
             <ContactInfo>
-              <a href="tel:073 XXXX XXXX">073 XXXX XXXX</a>
+              <a href="tel:07708921000">077 0892 1000</a>
             </ContactInfo>
           </Contact>
           <Contact>
