@@ -21,7 +21,6 @@ import { usePlaceholderQuery } from "../hooks/usePlaceholderQuery"
 const Property = ({ hit }) => {
   const { placeholder } = usePlaceholderQuery()
 
-  console.log(hit)
   return (
     <Wrapper>
       <Link to={hit.uri}>
@@ -38,7 +37,7 @@ const Property = ({ hit }) => {
       </Link>
       <Type>{hit.customPropertyFields.propertyType}</Type>
 
-      <Link to={hit.link}>
+      <Link to={hit.uri}>
         <Title>{hit.title}</Title>
       </Link>
 

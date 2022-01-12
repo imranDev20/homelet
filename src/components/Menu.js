@@ -7,7 +7,7 @@ import { useMenuQuery } from "../hooks/useMenuQuery"
 
 const Menu = () => {
   const { menu } = useMenuQuery()
-  console.log(menu)
+
   return (
     <Wrapper>
       {menu.nodes[0].menuItems.nodes.map(item => (

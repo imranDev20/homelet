@@ -1,11 +1,7 @@
 import tw, { styled } from "twin.macro"
-import heroImage from "../images/hero-image-2.jpeg"
 
 export const Wrapper = styled.section`
   height: calc(70vh - 80px);
-  background-image: ${`url(${heroImage})`};
-  background-repeat: no-repeat;
-  background-size: cover;
   position: relative;
   &::before {
     content: "";

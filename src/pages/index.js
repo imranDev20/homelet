@@ -2,11 +2,11 @@ import * as React from "react"
 
 import Seo from "../components/seo"
 import Layout from "../components/layout"
-import Hero from "../components/Hero"
 import HomeProperties from "../components/HomeProperties"
 
 import algoliasearch from "algoliasearch/lite"
 import { InstantSearch } from "react-instantsearch-dom"
+import Hero from "../components/Hero"
 
 const searchClient = algoliasearch(
   "VUOFOXPPB1",
