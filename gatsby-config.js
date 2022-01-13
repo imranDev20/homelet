@@ -85,7 +85,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Inter`, `Dancing Script`],
+        fonts: [`Dancing Script`],
         display: "swap",
       },
     },
