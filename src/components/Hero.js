@@ -15,7 +15,7 @@ import { useHeroQuery } from "../hooks/useHeroQuery"
 const Hero = () => {
   const { hero } = useHeroQuery()
 
-  const image = getImage(hero.customHomeFields.heroImage.localFile)
+  const image = getImage(hero.customHomeFields.heroImage?.localFile)
   const bgImage = convertToBgImage(image)
 
   return (
