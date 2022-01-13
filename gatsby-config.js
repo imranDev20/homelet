@@ -47,7 +47,7 @@ module.exports = {
     title: `Homelet Inn`,
     description: `Homelet Inn is a real estate company based in the Great Britain`,
     author: `@gatsbyjs`,
-    siteUrl: `https://homelet-inn.co.uk/`,
+    siteUrl: `https://backend.homelet-inn.co.uk/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -78,7 +78,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        url: "https://homelet-inn.co.uk/graphql",
+        url: "https://backend.homelet-inn.co.uk/graphql",
       },
     },
     `gatsby-plugin-styled-components`,
