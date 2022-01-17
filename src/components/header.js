@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import { FiHome } from "react-icons/fi"
+import LogoPng from "../images/Logo_HLI.png"
 
 import { Wrapper, Container, Logo } from "../styles/Header.styles"
 
@@ -13,8 +14,7 @@ const Header = () => {
       <Container>
         <Link to="/">
           <Logo>
-            <FiHome />
-            <h1>Homelet</h1>
+            <img src={LogoPng} alt="" />
           </Logo>
         </Link>
         <Menu />

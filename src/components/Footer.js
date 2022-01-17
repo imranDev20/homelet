@@ -3,6 +3,7 @@ import React from "react"
 import { FiHome } from "react-icons/fi"
 import { Link } from "gatsby"
 import { FiMail, FiPhone, FiMapPin, FiSend } from "react-icons/fi"
+import LogoPng from "../images/Logo_HLI.png"
 
 import {
   Wrapper,
@@ -31,8 +32,7 @@ const Footer = () => {
         <Cols>
           <Link to="/">
             <Logo>
-              <FiHome />
-              <h1>Homelet</h1>
+              <img src={LogoPng} alt="" />
             </Logo>
           </Link>
           <About>
@@ -71,8 +71,8 @@ const Footer = () => {
               <FiMail size={16} />
             </ContactIcon>
             <ContactInfo>
-              <a href="mailto:contact@homelet-inn.co.uk">
-                contact@homelet-inn.co.uk
+              <a href="mailto:hello@homelet-inn.co.uk">
+                hello@homelet-inn.co.uk
               </a>
             </ContactInfo>
           </Contact>
@@ -81,8 +81,7 @@ const Footer = () => {
               <FiMapPin size={16} />
             </ContactIcon>
             <ContactInfo>
-              Unit 46D, Micro Business Park, 46-50 Greatorex Street, London, E1
-              5NP
+              1i, 736-740 Romford Road, Manor Park, London E12 6BT
             </ContactInfo>
           </Contact>
         </Cols>

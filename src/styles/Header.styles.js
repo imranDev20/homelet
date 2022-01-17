@@ -8,10 +8,8 @@ export const Container = styled.div`
 
 export const Logo = styled.div`
   ${tw`flex items-center`}
-  svg {
-    ${tw`text-primary mr-1 text-3xl`}
-  }
-  h1 {
-    ${tw`text-2xl text-gray-700 font-medium`}
+  width: 12rem;
+  img {
+    ${tw`w-full object-contain`}
   }
 `
