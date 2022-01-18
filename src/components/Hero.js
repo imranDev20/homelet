@@ -34,7 +34,7 @@ const Hero = () => {
           <Search>
             <SearchBox
               translations={{
-                placeholder: "E.g. Flat with 5 beds London E213",
+                placeholder: "E.g. postcode or area search",
               }}
             />
           </Search>
