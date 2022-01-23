@@ -10,13 +10,14 @@ import {
   Wrapper,
   StyledImg,
   PlaceholderImg,
-  Info,
+  InfoRow,
   Price,
   Type,
   Title,
 } from "../styles/Property.styles"
 
 import { usePlaceholderQuery } from "../hooks/usePlaceholderQuery"
+import PropertyInfo from "./PropertyInfo"
 
 const Property = ({ hit }) => {
   const { placeholder } = usePlaceholderQuery()
@@ -41,23 +42,24 @@ const Property = ({ hit }) => {
         <Title>{hit.title}</Title>
       </Link>
 
-      <Info>
-        <div>
-          <FiMapPin /> {hit.customPropertyFields.placeName}
-        </div>
-        <div>
-          <MdLocationSearching /> {hit.customPropertyFields.postalCode}
-        </div>
-      </Info>
+      <InfoRow>
+        <PropertyInfo
+          icon={<FiMapPin />}
+          infoText={hit.customPropertyFields.placeName}
+        />
+        <PropertyInfo
+          icon={<MdLocationSearching />}
+          infoText={hit.customPropertyFields.postalCode}
+        />
+      </InfoRow>
 
-      <Info>
-        <div>
-          <IoBedOutline /> {hit.customPropertyFields.bedCount}
-        </div>
-        <div>
-          <FiClock /> {hit.date}
-        </div>
-      </Info>
+      <InfoRow>
+        <PropertyInfo
+          icon={<IoBedOutline />}
+          infoText={hit.customPropertyFields.bedCount}
+        />
+        <PropertyInfo icon={<FiClock />} infoText={hit.date} />
+      </InfoRow>
 
       <Price>
         <NumberFormat

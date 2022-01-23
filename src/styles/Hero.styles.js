@@ -18,7 +18,11 @@ export const Wrapper = styled.section`
 `
 
 export const Holder = styled.div`
-  width: 600px;
+  width: 70%;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+  max-width: 600px;
   ${tw` flex flex-col absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2`}
 `
 

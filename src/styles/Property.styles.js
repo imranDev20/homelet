@@ -1,15 +1,19 @@
 import tw, { styled } from "twin.macro"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-export const Wrapper = tw.div`flex flex-col p-4 rounded overflow-hidden`
+export const Wrapper = styled.div`
+  ${tw` rounded overflow-hidden `}
+`
 
 export const Type = tw.h5`text-sm text-primary mt-4 font-normal`
 
-export const Title = tw.h4`font-medium text-gray-700 mt-2 text-lg`
+export const Title = tw.h4`font-medium text-gray-700 mt-2 text-lg hover:text-primary-dark transition-colors`
 
 export const StyledImg = styled(GatsbyImage)`
+  ${tw`rounded-lg w-full`}
+
   img {
-    ${tw`rounded-lg overflow-hidden`}
+    ${tw`w-full object-cover`}
   }
 `
 
@@ -19,14 +23,8 @@ export const PlaceholderImg = styled(GatsbyImage)`
   }
 `
 
-export const Info = styled.div`
-  ${tw`flex justify-between mt-3`}
-  div {
-    ${tw`flex items-center text-gray-700 font-light text-sm`}
-    svg {
-      ${tw`text-primary mr-1`}
-    }
-  }
+export const InfoRow = styled.div`
+  ${tw`flex justify-between mt-3 `}
 `
 
 export const Price = styled.div`

@@ -28,7 +28,7 @@ module.exports = {
   },
   variants: {
     extend: {
-      textColor: ["group", "hover", "focus", "group-hover"],
+      transform: ["group", "hover", "focus", "group-hover"],
     },
   },
 

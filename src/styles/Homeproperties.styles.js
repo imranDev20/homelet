@@ -6,9 +6,7 @@ export const Wrapper = styled.section`
 export const Container = styled.div`
   ${tw`container mx-auto px-8`}
   .ais-Hits-list {
-    display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); */
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    ${tw`grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2   gap-10`}
   }
 `
 export const NoResults = styled.div`
