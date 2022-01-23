@@ -60,7 +60,7 @@ export const query = graphql`
             childImageSharp {
               gatsbyImageData(
                 placeholder: BLURRED
-                width: 1920
+                width: 720
                 transformOptions: { cropFocus: CENTER }
                 webpOptions: { quality: 85 }
               )

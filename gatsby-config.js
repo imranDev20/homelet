@@ -22,7 +22,7 @@ const AlgolioPropertyQuery = `{
           localFile {
             childImageSharp {
               gatsbyImageData(
-                width: 480
+                width: 240
                 aspectRatio: 1.375
                 transformOptions: {cropFocus: CENTER}
                 placeholder: BLURRED

@@ -17,7 +17,7 @@ import {
 } from "../styles/Property.styles"
 
 import { usePlaceholderQuery } from "../hooks/usePlaceholderQuery"
-import PropertyInfo from "./PropertyInfo"
+import HomePropertyInfo from "./HomePropertyInfo"
 
 const Property = ({ hit }) => {
   const { placeholder } = usePlaceholderQuery()
@@ -43,22 +43,22 @@ const Property = ({ hit }) => {
       </Link>
 
       <InfoRow>
-        <PropertyInfo
+        <HomePropertyInfo
           icon={<FiMapPin />}
           infoText={hit.customPropertyFields.placeName}
         />
-        <PropertyInfo
+        <HomePropertyInfo
           icon={<MdLocationSearching />}
           infoText={hit.customPropertyFields.postalCode}
         />
       </InfoRow>
 
       <InfoRow>
-        <PropertyInfo
+        <HomePropertyInfo
           icon={<IoBedOutline />}
           infoText={hit.customPropertyFields.bedCount}
         />
-        <PropertyInfo icon={<FiClock />} infoText={hit.date} />
+        <HomePropertyInfo icon={<FiClock />} infoText={hit.date} />
       </InfoRow>
 
       <Price>
