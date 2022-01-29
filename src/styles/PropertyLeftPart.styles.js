@@ -2,16 +2,16 @@ import tw, { styled } from "twin.macro"
 
 export const LeftPart = styled.div`
   ${tw``}
+  flex: 3;
 `
 export const Overview = styled.div`
-  ${tw``}
   h4 {
     ${tw`font-semibold text-xl`}
   }
 `
 
 export const OverviewContainer = styled.div`
-  ${tw`grid grid-cols-3 mt-5`}
+  ${tw`grid grid-cols-2 lg:grid-cols-3 mt-5`}
 `
 
 export const Block = styled.div`

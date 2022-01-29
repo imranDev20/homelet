@@ -32,8 +32,7 @@ export const PropertyImage = styled(GatsbyImage)`
 `
 
 export const HeaderContainer = styled.div`
-  top: 65%;
-  ${tw`absolute text-white z-10 container mx-auto px-8 flex justify-between items-center left-1/2 transform -translate-x-1/2`}
+  ${tw`absolute text-white z-10 container mx-auto px-8 flex flex-col md:flex-row justify-between md:items-center top-1/2 md:top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2`}
 `
 export const HeaderText = tw.div``
 
@@ -47,7 +46,7 @@ export const Title = styled.div`
   }
 `
 export const HeaderInfo = styled.div`
-  ${tw`flex`}
+  ${tw`flex flex-col md:flex-row`}
 `
 
 export const Location = styled.div`
@@ -63,7 +62,7 @@ export const ViewsCount = tw(TimeAgo)``
 
 export const Postal = tw(TimeAgo)``
 
-export const HeaderPrice = tw.div``
+export const HeaderPrice = tw.div`mt-5`
 
 export const PriceWrapper = styled.div`
   ${tw`text-4xl font-medium flex items-center `}

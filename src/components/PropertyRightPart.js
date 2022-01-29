@@ -35,7 +35,8 @@ const PropertyRightPart = () => {
 export default PropertyRightPart
 
 const Wrapper = styled.div`
-  ${tw`relative`}
+  ${tw`relative mb-10`}
+  flex: 1;
   p {
     ${tw`text-center text-gray-700 my-3 overflow-hidden`}
   }
